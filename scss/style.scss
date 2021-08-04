@@ -59,7 +59,7 @@ body {
     @include flex(row, wrap, center, center);
     @include set-size(55px);
 
-    border: 1px dashed $gray;
+    border: 2px dashed $gray;
     text-align: center;
     border-radius: 50%;
 
@@ -81,7 +81,7 @@ body {
   }
 
   &-under {
-    border-top: 1.5px dashed $gray;
+    border-top: 2px dashed $gray;
     width: 10%;
     margin: 0;
   }
@@ -91,3 +91,125 @@ body {
   }
   
 }
+
+.ui-main {
+  @include padding-x(270px);
+  &-header {
+    @include margin-y(30px);
+  }
+
+  &-info {
+    font-size: 16px;
+    cursor: pointer;
+    transition: color .2s;
+
+    &:hover {
+      color: $primary
+    }
+  }
+
+  .ui-category {
+    @include margin-x(auto);
+    // width: 55%;
+
+    &-list {
+      padding: 0;
+      
+      li {
+        cursor: pointer;
+      }
+
+     &-name {
+      margin-right: 15px;
+     }
+
+      &-icon-arrow {
+        float: left;
+      }
+
+      &-icon-check {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+      }
+    }
+
+    &-more {
+      margin-top: 30px;
+      cursor: pointer;
+
+      ul {
+        padding: 0;
+      }
+    }
+  }
+
+  .ui-product {
+    .ui-content {
+      .form-control {
+        box-shadow: none;
+
+        &:focus {
+          border: 1px solid $primary;
+        }
+      }
+
+      .ui-product-add-image {
+        &-label {
+          @include flex(row, wrap, center, center);
+
+          width: 100%;
+          height: 80px;
+          border: 2px dashed $gray;
+          color: $gray;
+          cursor: pointer;
+
+          svg {
+            font-size: 45px;
+            margin-left: 10px;
+          }
+
+          span {
+            font-size: 20px;
+          }
+        }
+        &-inp {
+          display: none;
+        }
+      }
+      
+      .ui-product-images {
+        .ui-product-image {
+          @include margin-y(10px);
+
+          width: 180px;
+          height: 180px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
+
+          &-del {
+            @include flex(row, wrap, center, center);
+
+            width: 100%;
+            height: 40px;
+            background-color: $primary;
+            color: $white;
+            cursor: pointer;
+            transition: all .3s;
+          }
+
+          &:hover {
+            .ui-product-image-del {
+              transform: translate(0, -40px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// !هم سنگرمی

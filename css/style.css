@@ -27,7 +27,7 @@ body {
   justify-content: center;
   width: 55px;
   height: 55px;
-  border: 1px dashed #808080;
+  border: 2px dashed #808080;
   text-align: center;
   border-radius: 50%;
 }
@@ -49,12 +49,132 @@ body {
 }
 
 .ui-rute-under {
-  border-top: 1.5px dashed #808080;
+  border-top: 2px dashed #808080;
   width: 10%;
   margin: 0;
 }
 
 .ui-rute .active-under {
   border-color: #F86486;
+}
+
+.ui-main {
+  padding-left: 270px;
+  padding-right: 270px;
+}
+
+.ui-main-header {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.ui-main-info {
+  font-size: 16px;
+  cursor: pointer;
+  transition: color .2s;
+}
+
+.ui-main-info:hover {
+  color: #F86486;
+}
+
+.ui-main .ui-category {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ui-main .ui-category-list {
+  padding: 0;
+}
+
+.ui-main .ui-category-list li {
+  cursor: pointer;
+}
+
+.ui-main .ui-category-list-name {
+  margin-right: 15px;
+}
+
+.ui-main .ui-category-list-icon-arrow {
+  float: left;
+}
+
+.ui-main .ui-category-list-icon-check {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+.ui-main .ui-category-more {
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.ui-main .ui-category-more ul {
+  padding: 0;
+}
+
+.ui-main .ui-product .ui-content .form-control {
+  box-shadow: none;
+}
+
+.ui-main .ui-product .ui-content .form-control:focus {
+  border: 1px solid #F86486;
+}
+
+.ui-main .ui-product .ui-content .ui-product-add-image-label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  border: 2px dashed #808080;
+  color: #808080;
+  cursor: pointer;
+}
+
+.ui-main .ui-product .ui-content .ui-product-add-image-label svg {
+  font-size: 45px;
+  margin-left: 10px;
+}
+
+.ui-main .ui-product .ui-content .ui-product-add-image-label span {
+  font-size: 20px;
+}
+
+.ui-main .ui-product .ui-content .ui-product-add-image-inp {
+  display: none;
+}
+
+.ui-main .ui-product .ui-content .ui-product-images .ui-product-image {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+}
+
+.ui-main .ui-product .ui-content .ui-product-images .ui-product-image img {
+  width: 100%;
+}
+
+.ui-main .ui-product .ui-content .ui-product-images .ui-product-image-del {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  background-color: #F86486;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.ui-main .ui-product .ui-content .ui-product-images .ui-product-image:hover .ui-product-image-del {
+  transform: translate(0, -40px);
 }
 /*# sourceMappingURL=style.css.map */
