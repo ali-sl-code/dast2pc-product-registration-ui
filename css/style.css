@@ -1,1 +1,60 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@font-face {
+  font-family: 'iran-sans';
+  src: url("../fonts/iransans/eot/IRANSansWeb.eot") format("eot"), url("../fonts/iransans/ttf/IRANSansWeb.ttf") format("truetype"), url("../fonts/iransans/woff/IRANSansWeb.woff") format("woff"), url("../fonts/iransans/woff2/IRANSansWeb.woff2") format("woff2");
+}
+
+body {
+  direction: rtl !important;
+  font-family: 'iran-sans' !important;
+  text-align: right;
+}
+
+.ui-rute {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.ui-rute-item-num {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border: 1px dashed #808080;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.ui-rute-item-num p {
+  margin: 0;
+  font-size: 22px;
+  margin-top: 4px;
+  color: #808080;
+}
+
+.ui-rute .active-item {
+  border-color: #F86486;
+  background-color: #F86486;
+}
+
+.ui-rute .active-item p {
+  color: #FFFFFF;
+}
+
+.ui-rute-under {
+  border-top: 1.5px dashed #808080;
+  width: 10%;
+  margin: 0;
+}
+
+.ui-rute .active-under {
+  border-color: #F86486;
+}
+/*# sourceMappingURL=style.css.map */

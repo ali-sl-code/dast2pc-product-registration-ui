@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ali-sl-code/dast2pc-product-registration-ui#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "bootstrap": "^4.4.1"
   }
 }

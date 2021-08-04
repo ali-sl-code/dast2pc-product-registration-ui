@@ -1,0 +1,93 @@
+// Add Fonts
+@font-face {
+  font-family: 'iran-sans';
+  src: url("../fonts/iransans/eot/IRANSansWeb.eot") format("eot"), url("../fonts/iransans/ttf/IRANSansWeb.ttf") format("truetype"), url("../fonts/iransans/woff/IRANSansWeb.woff") format("woff"), url("../fonts/iransans/woff2/IRANSansWeb.woff2") format("woff2");
+}
+
+// Var
+$gray: #808080;
+$primary: #F86486;
+$white: #FFFFFF;
+
+// Mixins
+@mixin flex($direction, $wrap, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin set-size($val) {
+  width: $val;
+  height: $val;
+}
+
+@mixin margin-y($val) {
+  margin-top: $val;
+  margin-bottom: $val;
+}
+
+@mixin margin-x($val) {
+  margin-left: $val;
+  margin-right: $val;
+}
+
+@mixin padding-y($val) {
+  padding-top: $val;
+  padding-bottom: $val;
+}
+
+@mixin padding-x($val) {
+  padding-left: $val;
+  padding-right: $val;
+}
+
+// Reset styles
+body {
+  direction: rtl !important;
+  font-family: 'iran-sans' !important;
+  text-align: right;
+}
+
+// Style code (copy to website)
+.ui-rute {
+  @include flex(row, wrap, center, center);
+  @include margin-y(40px);
+
+  &-item-num {
+    @include flex(row, wrap, center, center);
+    @include set-size(55px);
+
+    border: 1px dashed $gray;
+    text-align: center;
+    border-radius: 50%;
+
+    p {
+      margin: 0;
+      font-size: 22px;
+      margin-top: 4px;
+      color: $gray;
+    }
+  }
+
+  .active-item {
+    border-color: $primary;
+    background-color: $primary;
+
+    p {
+      color: $white;
+    }
+  }
+
+  &-under {
+    border-top: 1.5px dashed $gray;
+    width: 10%;
+    margin: 0;
+  }
+
+  .active-under {
+    border-color: $primary;
+  }
+  
+}
