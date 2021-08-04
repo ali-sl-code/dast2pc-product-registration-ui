@@ -1,0 +1,23 @@
+{
+  "name": "dast2pc-product-registration-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ali-sl-code/dast2pc-product-registration-ui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ali-sl-code/dast2pc-product-registration-ui/issues"
+  },
+  "homepage": "https://github.com/ali-sl-code/dast2pc-product-registration-ui#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1"
+  }
+}
