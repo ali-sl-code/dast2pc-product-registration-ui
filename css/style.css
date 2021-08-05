@@ -158,6 +158,8 @@ body {
 
 .ui-main .ui-product .ui-content .ui-product-images .ui-product-image img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .ui-main .ui-product .ui-content .ui-product-images .ui-product-image-del {
