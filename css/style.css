@@ -35,7 +35,7 @@ body {
 .ui-rute-item-num p {
   margin: 0;
   font-size: 22px;
-  margin-top: 4px;
+  margin-top: 2px;
   color: #808080;
 }
 
@@ -59,8 +59,8 @@ body {
 }
 
 .ui-main {
-  padding-left: 270px;
-  padding-right: 270px;
+  padding-left: 200px;
+  padding-right: 200px;
 }
 
 .ui-main-header {

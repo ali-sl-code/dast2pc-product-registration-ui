@@ -66,7 +66,7 @@ body {
     p {
       margin: 0;
       font-size: 22px;
-      margin-top: 4px;
+      margin-top: 2px;
       color: $gray;
     }
   }
@@ -93,7 +93,7 @@ body {
 }
 
 .ui-main {
-  @include padding-x(270px);
+  @include padding-x(200px);
   &-header {
     @include margin-y(30px);
   }
