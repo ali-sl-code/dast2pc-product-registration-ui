@@ -191,26 +191,20 @@ body {
             height: 100%;
             object-fit: cover;
           }
-
-          &-del {
-            @include flex(row, wrap, center, center);
-
-            width: 100%;
-            height: 40px;
-            background-color: $primary;
-            color: $white;
-            cursor: pointer;
-            transition: all .3s;
-          }
-
-          &:hover {
-            .ui-product-image-del {
-              transform: translate(0, -40px);
-            }
-          }
         }
       }
     }
+  }
+
+  .ui-user {
+    .ui-content {
+      .form-control {
+        box-shadow: none;
+
+        &:focus {
+          border: 1px solid $primary;
+        }
+      }    }
   }
 }
 

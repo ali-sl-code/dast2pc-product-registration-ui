@@ -16,7 +16,7 @@
 <body>
   <div class="container">
     <div class="ui-rute">
-      <div class="ui-rute-item ui-rute-item-num ui-rute-item-1">
+      <div class="ui-rute-item ui-rute-item-num ui-rute-item-1 active-item">
         <p>۱</p>
       </div>
       <hr class="ui-rute-item ui-rute-under">
@@ -78,83 +78,15 @@
               <i class="fas fa-camera"></i>
               <span>افزودن عکس</span>
             </label>
-            <input type="file" name="product-image" id="productImage" onchange="onInputChange(event)" class="ui-product-add-image-inp"accept="image/*" multiple>
+            <input type="file" name="product-image" id="productImage" onchange="onInputChange(event)" class="ui-product-add-image-inp"accept="image/*" value="" multiple>
           </div>
+          <div class="ui-product-remove-image"></div>
           <div class="ui-product-images d-flex flex-wrap align-items-center justify-content-around"></div>
           <button type="button" class="btn btn-outline-success d-block w-100 my-5" id="productNext">بعدی <i class="fas fa-angle-left"></i></button>
         </div>
       </div>
 
-      <script>
-        let productCategory;
-        let images = [];
-        $(".ui-category-list li").click(function (param) {
-          if ($(this).data('list') !== undefined) {
-            dataThis = $(this).data('list')
-            subseThis = $("ul[data-parent-list='" + dataThis + "']")
-            if (subseThis.length != 0) {
-              productCategory = dataThis
-              $(this).parent().hide()
-              subseThis.removeClass('d-none')
-            } else {
-              productCategory = dataThis
-              $(".ui-category").addClass('d-none')
-              $(".ui-product").removeClass('d-none')
-              rute = $(".ui-rute > *")
-              $(rute[0]).addClass('active-item')
-              $(rute[1]).addClass('active-under')
-            }
-          }
-        })
-
-        $("#productBack").click(function () {
-              $(".ui-category").removeClass('d-none')
-              $(".ui-product").addClass('d-none')
-              rute = $(".ui-rute > *")
-              $(rute[0]).removeClass('active-item')
-              $(rute[1]).removeClass('active-under')
-        })
-
-        $("#productNext").click(function () {
-          productHeader = $("#productHeader")
-          productDisc = $("#productDisc")
-        })
-
-        function onInputChange(event){
-          $('.ui-product-images').html(" ")
-          files = event.target.files
-          images = files
-          var reader = [];
-          for (let index = 0; index < files.length; index++) {
-              reader[index] = new FileReader();
-              reader[index].onload = function(){
-                $('.ui-product-images').append(`
-                <div class="ui-product-image">
-                  <img src="`+reader[index].result+`" alt="">
-                  <div class="ui-product-image-del" data-image-id="` + index + `">
-                    <span>حذف عکس</span>
-                  </div>
-                </div>
-                `)
-              }
-              reader[index].readAsDataURL(files[index]);
-            }
-        }
-
-        $(".ui-product-images").on('click', '.ui-product-image-del', function () {
-          bthThis = this
-          bthThisJQ = $(this)
-          bthThisJQ.parent().remove()
-          imageId = bthThisJQ.data('image-id')
-          console.log(imageId);
-          console.log(images[imageId]);
-          images[imageId] = " "
-          // $(images).splice(imageId, 1, undefined)
-          console.log(images);
-        })
-      </script>
-
-      <!-- <div class="ui-user">
+      <div class="ui-user d-none">
         <div class="d-flex align-items-center justify-content-between">
           <h3 class="ui-main-header d-inline-block">نام و نام خانوادگی <span class="ui-main-info" title="نام و نام خانوادگی صاحب محصول"><i class="fas fa-info-circle"></i></span></h3>
           <button type="button" class="btn btn-outline-danger float-left" id="userBack"><i class="fas fa-chevron-right"></i> برگشت</button>
@@ -166,8 +98,14 @@
         <div class="ui-content">
           <input type="text" name="user-number" id="userNumber" class="form-control">
         </div>
-        <button type="button" class="btn btn-outline-success d-block w-100 my-5" id="userNext">بعدی <i class="fas fa-angle-left"></i></button>
-      </div> -->
+        <button type="button" class="btn btn-outline-success d-block w-100 my-5" id="userNext">ارسال اطلاعات</button>
+      </div>
+
+      <div class="ui-completed d-none">
+        <div class="alert alert-success" role="alert">
+          <i class="fas fa-check"></i> اطلاعات با موفقیت ارسال شد. میتونید وضعیت فروش محصولتان را در <a href="#" class="alert-link">پنل کاربریتان </a>مشاهده کنید.
+        </div>
+      </div>
     </div>
   </div>
 

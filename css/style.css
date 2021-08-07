@@ -162,21 +162,11 @@ body {
   object-fit: cover;
 }
 
-.ui-main .ui-product .ui-content .ui-product-images .ui-product-image-del {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 40px;
-  background-color: #F86486;
-  color: #FFFFFF;
-  cursor: pointer;
-  transition: all .3s;
+.ui-main .ui-user .ui-content .form-control {
+  box-shadow: none;
 }
 
-.ui-main .ui-product .ui-content .ui-product-images .ui-product-image:hover .ui-product-image-del {
-  transform: translate(0, -40px);
+.ui-main .ui-user .ui-content .form-control:focus {
+  border: 1px solid #F86486;
 }
 /*# sourceMappingURL=style.css.map */
