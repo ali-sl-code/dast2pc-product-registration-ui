@@ -44,24 +44,24 @@ $(document).ready(() => {
       $("#productImage").val('')
   })
 
-  $("#productNext").click(function () {
-      if ($("#productHeader").val() == "") {
-          alert("لطفا نام محصول مورد نظر خود را وارد کنید")
-          $("#productHeader").focus();
-      } else {
-          if ($("#productImage").val() == "") {
-              alert("لطفا عکس محصول مورد نظر خود را وارد کنید")
-              // $("#productImage").focus();
-              $('#productImage').trigger('click')
-          } else {
-              $(".ui-user").removeClass('d-none')
-              $(".ui-product").addClass('d-none')
-              rute = $(".ui-rute > *")
-              $(rute[3]).addClass('active-under')
-              $(rute[4]).addClass('active-item')
-          }
-      }
-  })
+//   $("#productNext").click(function () {
+//       if ($("#productHeader").val() == "") {
+//           alert("لطفا نام محصول مورد نظر خود را وارد کنید")
+//           $("#productHeader").focus();
+//       } else {
+//           if ($("#productImage").val() == "") {
+//               alert("لطفا عکس محصول مورد نظر خود را وارد کنید")
+//               // $("#productImage").focus();
+//               $('#productImage').trigger('click')
+//           } else {
+//               $(".ui-user").removeClass('d-none')
+//               $(".ui-product").addClass('d-none')
+//               rute = $(".ui-rute > *")
+//               $(rute[3]).addClass('active-under')
+//               $(rute[4]).addClass('active-item')
+//           }
+//       }
+//   })
 
   $("#userBack").click(function () {
       $(".ui-user").addClass('d-none')
@@ -72,24 +72,39 @@ $(document).ready(() => {
   })
 
   $(".req-form").on('submit', function (e) {
-      if ($("#userName").val() == "") {
-          e.preventDefault()
-          alert("لطفا نام و نام خانوادگی خود را وارد کنید.")
-          $("#userName").focus()
-      } else {
-          if ($("#userNumber").val() == "") {
-              e.preventDefault()
-              alert("لطفا شماره تلفن خود را وارد کنید.")
-              $("#userNumber").focus()
-          } else {
-              $(".ui-user").addClass('d-none')
-              $(".ui-completed").removeClass('d-none')
-              rute = $(".ui-rute > *")
-              $(rute[5]).addClass('active-under')
-              $(rute[6]).addClass('active-item')
-          }
-      }
-  })
+    if ($("#productHeader").val() == "") {
+        alert("لطفا نام محصول مورد نظر خود را وارد کنید")
+        $("#productHeader").focus();
+        e.preventDefault()
+        return false
+    } else {
+        if ($("#productImage").val() == "") {
+            alert("لطفا عکس محصول مورد نظر خود را وارد کنید")
+            $('#productImage').trigger('click')
+            e.preventDefault()
+            return false
+        }
+    }
+    // if ($("#userName").val() == "") {
+    //     e.preventDefault()
+    //     alert("لطفا نام و نام خانوادگی خود را وارد کنید.")
+    //     $("#userName").focus()
+    //     return false
+    // } else {
+    //     if ($("#userNumber").val() == "") {
+    //         e.preventDefault()
+    //         alert("لطفا شماره تلفن خود را وارد کنید.")
+    //         $("#userNumber").focus()
+    //         return false
+    //     } else {
+    //         $(".ui-user").addClass('d-none')
+    //         $(".ui-completed").removeClass('d-none')
+    //         rute = $(".ui-rute > *")
+    //         $(rute[5]).addClass('active-under')
+    //         $(rute[6]).addClass('active-item')
+    //     }
+    // }
+})
 
   $(".ui-category").on('click', '#categoryBack', function () {
     $(this).parent().parent().find('.list-group.ui-category-list').addClass('d-none')

@@ -224,17 +224,6 @@ body {
       }
     }
   }
-
-  .ui-user {
-    .ui-content {
-      .form-control {
-        box-shadow: none;
-
-        &:focus {
-          border: 1px solid $primary;
-        }
-      }    }
-  }
 }
 
 // !هم سنگرمی

@@ -201,12 +201,4 @@ body {
   height: 100%;
   object-fit: cover;
 }
-
-.ui-main .ui-user .ui-content .form-control {
-  box-shadow: none;
-}
-
-.ui-main .ui-user .ui-content .form-control:focus {
-  border: 1px solid #F86486;
-}
 /*# sourceMappingURL=style.css.map */
