@@ -14,102 +14,105 @@
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
-  <div class="container">
-    <div class="ui-rute">
-      <div class="ui-rute-item ui-rute-item-num ui-rute-item-1 active-item">
-        <p>۱</p>
-      </div>
-      <hr class="ui-rute-item ui-rute-under">
-      <div class="ui-rute-item ui-rute-item-num ui-rute-item-2">
-        <p>۲</p>
-      </div>
-      <hr class="ui-rute-item ui-rute-under">
-      <div class="ui-rute-item ui-rute-item-num ui-rute-item-3">
-        <p>۳</p>
-      </div>
-      <hr class="ui-rute-item ui-rute-under">
-      <div class="ui-rute-item ui-rute-item-num ui-rute-item-success">
-        <p><i class="fas fa-check"></i></p>
-      </div>
+  <form action="" method="post" class="req-form">
+    <div class="container">
+        <div class="ui-rute">
+            <div class="ui-rute-item ui-rute-item-num ui-rute-item-1 active-item">
+                <p>۱</p>
+            </div>
+            <hr class="ui-rute-item ui-rute-under">
+            <div class="ui-rute-item ui-rute-item-num ui-rute-item-2">
+                <p>۲</p>
+            </div>
+            <hr class="ui-rute-item ui-rute-under">
+            <div class="ui-rute-item ui-rute-item-num ui-rute-item-3">
+                <p>۳</p>
+            </div>
+            <hr class="ui-rute-item ui-rute-under">
+            <div class="ui-rute-item ui-rute-item-num ui-rute-item-success">
+                <p><i class="fas fa-check"></i></p>
+            </div>
+        </div>
+
+        <div class="ui-main">
+            <div class="ui-category">
+                <div class="ui-category-head d-flex align-items-center justify-content-between">
+                    <h3 class="ui-main-header d-inline-block">دسته بندی <span class="ui-main-info" title="دسته بندی کالای مود نظر خود را انتخاب کنید"><i class="fas fa-info-circle"></i></span></h3>
+                </div>
+                <div class="ui-content">
+                    <div class="overflow-hidden">
+                        <ul class="list-group ui-category-list w-100">
+                            <li class="list-group-item list-group-item-action" data-list="1"><span class="ui-category-list-name">مادربرد</span><span class="ui-category-list-icon-check"><i class="fas fa-check-circle"></i></span></li>
+                            <li class="list-group-item list-group-item-action" data-list="2"><span class="ui-category-list-name">کارت گرافیک</span><span class="ui-category-list-icon-arrow"><i class="fas fa-chevron-left"></i></span></li>
+                            <li class="list-group-item list-group-item-action" data-list="3"><span class="ui-category-list-name">کیس</span><span class="ui-category-list-icon-arrow"><i class="fas fa-chevron-left"></i></span></li>
+                            <li class="list-group-item list-group-item-action" data-list="4"><span class="ui-category-list-name">رم</span><span class="ui-category-list-icon-check"><i class="fas fa-check-circle"></i></span></li>
+                            <li class="list-group-item list-group-item-action" data-list="5"><span class="ui-category-list-name">پاور</span><span class="ui-category-list-icon-arrow"><i class="fas fa-chevron-left"></i></span></li>
+                        </ul>
+                        <ul class="list-group ui-category-list d-none w-100" data-parent-list="2">
+                            <li class="list-group-item list-group-item-action" data-list="11"><span class="ui-category-list-name">ای ام دی</span><span class="ui-category-list-icon-check"><i class="fas fa-check-circle"></i></span></li>
+                            <li class="list-group-item list-group-item-action" data-list="12"><span class="ui-category-list-name">اینتل</span><span class="ui-category-list-icon-check"><i class="fas fa-check-circle"></i></span></li>
+                            <li class="list-group-item list-group-item-action" data-list="13"><span class="ui-category-list-name">انویدیا</span><span class="ui-category-list-icon-check"><i class="fas fa-check-circle"></i></span></li>
+                        </ul>
+                    </div>
+                    <div class="ui-category-more">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-action" data-list="more">سایر...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui-product d-none">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h3 class="ui-main-header d-inline-block">عنوان <span class="ui-main-info" title="نام محصول مورد نظر"><i class="fas fa-info-circle"></i></span></h3>
+                    <button type="button" class="btn btn-outline-danger" id="productBack"><i class="fas fa-chevron-right"></i> برگشت</button>
+                </div>
+                <div class="ui-content">
+                    <input type="text" name="product-header" id="productHeader" class="form-control">
+                </div>
+                <h3 class="ui-main-header">توضیحات <span class="ui-main-info" title="در مورد محصول"><i class="fas fa-info-circle"></i></span></h3>
+                <div class="ui-content">
+                    <textarea name="product-disc" id="productDisc" class="form-control" rows="5"></textarea>
+                </div>
+                <h3 class="ui-main-header">عکس <span class="ui-main-info" title="عکس محصول"><i class="fas fa-info-circle"></i></span></h3>
+                <div class="ui-content">
+                    <div class="ui-product-add-image">
+                        <label for="productImage" class="ui-product-add-image-label">
+                            <i class="fas fa-camera"></i>
+                            <span>افزودن عکس</span>
+                        </label>
+                        <input type="file" name="product-image" id="productImage" onchange="onInputChange(event)" class="ui-product-add-image-inp"accept="image/*" value="" multiple>
+                    </div>
+                    <div class="ui-product-remove-image"></div>
+                    <div class="ui-product-images d-flex flex-wrap align-items-center justify-content-around"></div>
+                    <button type="button" class="btn btn-outline-success d-block w-100 my-5" id="productNext">بعدی <i class="fas fa-angle-left"></i></button>
+                </div>
+            </div>
+
+            <div class="ui-user d-none">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h3 class="ui-main-header d-inline-block">نام و نام خانوادگی <span class="ui-main-info" title="نام و نام خانوادگی صاحب محصول"><i class="fas fa-info-circle"></i></span></h3>
+                    <button type="button" class="btn btn-outline-danger float-left" id="userBack"><i class="fas fa-chevron-right"></i> برگشت</button>
+                </div>
+                <div class="ui-content">
+                    <input type="text" name="user-name" id="userName" class="form-control">
+                </div>
+                <h3 class="ui-main-header d-inline-block">شماره تماس <span class="ui-main-info" title="شماره تماس فروشنده"><i class="fas fa-info-circle"></i></span></h3>
+                <div class="ui-content">
+                    <input type="text" name="user-number" id="userNumber" class="form-control">
+                </div>
+                <input type="submit" class="btn btn-outline-success d-block w-100 my-5" id="userNext" value="ارسال اطلاعات">
+            </div>
+
+            <div class="ui-completed d-none">
+                <div class="alert alert-success" role="alert">
+                    <i class="fas fa-check"></i> اطلاعات با موفقیت ارسال شد. میتونید وضعیت فروش محصولتان را در <a href="#" class="alert-link">پنل کاربریتان </a>مشاهده کنید.
+                </div>
+            </div>
+        </div>
     </div>
+</form>
 
-    <div class="ui-main">
-      <div class="ui-category">
-        <div class="ui-category-head d-flex align-items-center justify-content-between">
-          <h3 class="ui-main-header d-inline-block">دسته بندی <span class="ui-main-info" title="دسته بندی کالای مود نظر خود را انتخاب کنید"><i class="fas fa-info-circle"></i></span></h3>
-        </div>
-        <div class="ui-content">
-          <div class="overflow-hidden">
-            <ul class="list-group ui-category-list w-100">
-              <li class="list-group-item list-group-item-action" data-list="1"><span class="ui-category-list-name">مادربرد</span><span class="ui-category-list-icon-check"><i class="fas fa-check-circle"></i></span></li>
-              <li class="list-group-item list-group-item-action" data-list="2"><span class="ui-category-list-name">کارت گرافیک</span><span class="ui-category-list-icon-arrow"><i class="fas fa-chevron-left"></i></span></li>
-              <li class="list-group-item list-group-item-action" data-list="3"><span class="ui-category-list-name">کیس</span><span class="ui-category-list-icon-arrow"><i class="fas fa-chevron-left"></i></span></li>
-              <li class="list-group-item list-group-item-action" data-list="4"><span class="ui-category-list-name">رم</span><span class="ui-category-list-icon-check"><i class="fas fa-check-circle"></i></span></li>
-              <li class="list-group-item list-group-item-action" data-list="5"><span class="ui-category-list-name">پاور</span><span class="ui-category-list-icon-arrow"><i class="fas fa-chevron-left"></i></span></li>
-            </ul>
-            <ul class="list-group ui-category-list d-none w-100" data-parent-list="2">
-                <li class="list-group-item list-group-item-action" data-list="11"><span class="ui-category-list-name">ای ام دی</span><span class="ui-category-list-icon-check"><i class="fas fa-check-circle"></i></span></li>
-                <li class="list-group-item list-group-item-action" data-list="12"><span class="ui-category-list-name">اینتل</span><span class="ui-category-list-icon-check"><i class="fas fa-check-circle"></i></span></li>
-                <li class="list-group-item list-group-item-action" data-list="13"><span class="ui-category-list-name">انویدیا</span><span class="ui-category-list-icon-check"><i class="fas fa-check-circle"></i></span></li>
-            </ul>
-          </div>
-          <div class="ui-category-more">
-            <ul class="list-group">
-              <li class="list-group-item list-group-item-action" data-list="more">سایر...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="ui-product d-none">
-        <div class="d-flex align-items-center justify-content-between">
-          <h3 class="ui-main-header d-inline-block">عنوان <span class="ui-main-info" title="نام محصول مورد نظر"><i class="fas fa-info-circle"></i></span></h3>
-          <button type="button" class="btn btn-outline-danger" id="productBack"><i class="fas fa-chevron-right"></i> برگشت</button>
-        </div>
-        <div class="ui-content">
-          <input type="text" name="product-header" id="productHeader" class="form-control">
-        </div>
-        <h3 class="ui-main-header">توضیحات <span class="ui-main-info" title="در مورد محصول"><i class="fas fa-info-circle"></i></span></h3>
-        <div class="ui-content">
-          <textarea name="product-disc" id="productDisc" class="form-control" cols="30"></textarea>
-        </div>
-        <h3 class="ui-main-header">عکس <span class="ui-main-info" title="عکس محصول"><i class="fas fa-info-circle"></i></span></h3>
-        <div class="ui-content">
-          <div class="ui-product-add-image">
-            <label for="productImage" class="ui-product-add-image-label">
-              <i class="fas fa-camera"></i>
-              <span>افزودن عکس</span>
-            </label>
-            <input type="file" name="product-image" id="productImage" onchange="onInputChange(event)" class="ui-product-add-image-inp"accept="image/*" value="" multiple>
-          </div>
-          <div class="ui-product-remove-image"></div>
-          <div class="ui-product-images d-flex flex-wrap align-items-center justify-content-around"></div>
-          <button type="button" class="btn btn-outline-success d-block w-100 my-5" id="productNext">بعدی <i class="fas fa-angle-left"></i></button>
-        </div>
-      </div>
-
-      <div class="ui-user d-none">
-        <div class="d-flex align-items-center justify-content-between">
-          <h3 class="ui-main-header d-inline-block">نام و نام خانوادگی <span class="ui-main-info" title="نام و نام خانوادگی صاحب محصول"><i class="fas fa-info-circle"></i></span></h3>
-          <button type="button" class="btn btn-outline-danger float-left" id="userBack"><i class="fas fa-chevron-right"></i> برگشت</button>
-        </div>
-        <div class="ui-content">
-          <input type="text" name="user-name" id="userName" class="form-control">
-        </div>
-        <h3 class="ui-main-header d-inline-block">شماره تماس <span class="ui-main-info" title="شماره تماس فروشنده"><i class="fas fa-info-circle"></i></span></h3>
-        <div class="ui-content">
-          <input type="text" name="user-number" id="userNumber" class="form-control">
-        </div>
-        <button type="button" class="btn btn-outline-success d-block w-100 my-5" id="userNext">ارسال اطلاعات</button>
-      </div>
-
-      <div class="ui-completed d-none">
-        <div class="alert alert-success" role="alert">
-          <i class="fas fa-check"></i> اطلاعات با موفقیت ارسال شد. میتونید وضعیت فروش محصولتان را در <a href="#" class="alert-link">پنل کاربریتان </a>مشاهده کنید.
-        </div>
-      </div>
-    </div>
-  </div>
 
   <script src="node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
   <script src="node_modules/popper.js/dist/popper.min.js"></script>

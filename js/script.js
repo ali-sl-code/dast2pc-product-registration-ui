@@ -71,12 +71,14 @@ $(document).ready(() => {
       $(rute[4]).removeClass('active-item')
   })
 
-  $("#userNext").click(function () {
+  $(".req-form").on('submit', function (e) {
       if ($("#userName").val() == "") {
+          e.preventDefault()
           alert("لطفا نام و نام خانوادگی خود را وارد کنید.")
           $("#userName").focus()
       } else {
           if ($("#userNumber").val() == "") {
+              e.preventDefault()
               alert("لطفا شماره تلفن خود را وارد کنید.")
               $("#userNumber").focus()
           } else {

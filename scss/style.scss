@@ -51,6 +51,14 @@ body {
 }
 
 // Style code (copy to website)
+.req-form {
+  .container {
+    @media screen and (max-width: 993px) {
+      max-width: 100% !important;
+    }
+  }
+}
+
 .ui-rute {
   @include flex(row, wrap, center, center);
   @include margin-y(40px);
@@ -63,11 +71,19 @@ body {
     text-align: center;
     border-radius: 50%;
 
+    @media screen and (max-width: 375px) {
+      @include set-size(45px);
+    }
+
     p {
       margin: 0;
       font-size: 22px;
       margin-top: 2px;
       color: $gray;
+
+      @media screen and (max-width: 375px) {
+        font-size: 20px;
+      }
     }
   }
 
@@ -94,6 +110,19 @@ body {
 
 .ui-main {
   @include padding-x(200px);
+
+  @media (max-width: 800px) {
+    @include padding-x(100px);
+  }
+
+  @media (max-width: 600px) {
+    @include padding-x(50px);
+  }
+
+  @media (max-width: 426px) {
+    @include padding-x(0);
+  }
+  
   &-header {
     @include margin-y(30px);
   }

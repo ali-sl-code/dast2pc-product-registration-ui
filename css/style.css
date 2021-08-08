@@ -9,6 +9,12 @@ body {
   text-align: right;
 }
 
+@media screen and (max-width: 993px) {
+  .req-form .container {
+    max-width: 100% !important;
+  }
+}
+
 .ui-rute {
   display: flex;
   flex-direction: row;
@@ -32,11 +38,24 @@ body {
   border-radius: 50%;
 }
 
+@media screen and (max-width: 375px) {
+  .ui-rute-item-num {
+    width: 45px;
+    height: 45px;
+  }
+}
+
 .ui-rute-item-num p {
   margin: 0;
   font-size: 22px;
   margin-top: 2px;
   color: #808080;
+}
+
+@media screen and (max-width: 375px) {
+  .ui-rute-item-num p {
+    font-size: 20px;
+  }
 }
 
 .ui-rute .active-item {
@@ -61,6 +80,27 @@ body {
 .ui-main {
   padding-left: 200px;
   padding-right: 200px;
+}
+
+@media (max-width: 800px) {
+  .ui-main {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ui-main {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 426px) {
+  .ui-main {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .ui-main-header {
